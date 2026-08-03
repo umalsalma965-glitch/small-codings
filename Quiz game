@@ -1,0 +1,17 @@
+score = 0
+
+print("Python Quiz")
+
+answer = input("1. Who developed Python? ")
+if answer.lower() == "guido van rossum":
+    score += 1
+
+answer = input("2. Which keyword is used for a function? ")
+if answer.lower() == "def":
+    score += 1
+
+answer = input("3. Which data type stores True/False values? ")
+if answer.lower() == "bool":
+    score += 1
+
+print("Your Score:", score, "/3")

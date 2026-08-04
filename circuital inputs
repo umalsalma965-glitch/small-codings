@@ -1,0 +1,11 @@
+print("===== Ohm's Law Calculator =====")
+
+voltage = float(input("Enter Voltage (V): "))
+resistance = float(input("Enter Resistance (Ω): "))
+
+current = voltage / resistance
+
+print("\nResults")
+print("Voltage :", voltage, "V")
+print("Resistance :", resistance, "Ω")
+print("Current :", round(current, 2), "A")

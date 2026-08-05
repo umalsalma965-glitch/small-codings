@@ -1,0 +1,49 @@
+# Account Access Login System
+
+USERNAME = "admin"
+PASSWORD = "12345"
+
+attempts = 3
+
+while attempts > 0:
+    print("\n===== LOGIN =====")
+
+    username = input("Enter Username: ")
+    password = input("Enter Password: ")
+
+    if username == USERNAME and password == PASSWORD:
+        print("\nLogin Successful!")
+        print("Welcome,", username)
+
+        while True:
+            print("\n===== ACCOUNT MENU =====")
+            print("1. View Profile")
+            print("2. Change Password")
+            print("3. Logout")
+
+            choice = input("Enter your choice: ")
+
+            if choice == "1":
+                print("\nUsername:", USERNAME)
+
+            elif choice == "2":
+                new_password = input("Enter New Password: ")
+                PASSWORD = new_password
+                print("Password changed successfully!")
+
+            elif choice == "3":
+                print("Logged out successfully.")
+                break
+
+            else:
+                print("Invalid choice!")
+
+        break
+
+    else:
+        attempts -= 1
+        print("Invalid Username or Password!")
+        print("Attempts Left:", attempts)
+
+if attempts == 0:
+    print("\nAccount Locked! Too many failed login attempts.")

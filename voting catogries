@@ -1,0 +1,7 @@
+voting = int(input("Enter a age for voting: "))
+i = 18
+for i in range (voting):
+      if i>=18:
+           print("eligible foe voting")
+      else:
+           print("not eligible for voting")
